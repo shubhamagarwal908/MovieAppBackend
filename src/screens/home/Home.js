@@ -77,6 +77,7 @@ class Home extends Component {
                 debugger;
                 that.setState({
                     // eslint-disable-next-line
+                    // eslint-disable-next-line
                     upcomingMovies: JSON.parse(this.responseText).movies
                 });
             }
