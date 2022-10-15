@@ -13,4 +13,17 @@ app.listen(9000, () => {
   console.log('Server is up on port 9000');
 });
 
-db.genres.insert([{"genreid": 1, "genre": "comedy"},{"genreid": 2, "genre": "drama"},{"genreid": 3, "genre": "action"},{"genreid": 4, "genre": "romance"},{"genreid": 5, "genre": "horror"}])
+const db = require("./app/models");
+db.mongoose
+  .connect(db.url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    console.log("Connected to the database!");
+    
+  })
+  .catch(err => {
+    console.log("Cannot connect to the database!", err);
+    process.exit();
+  });
