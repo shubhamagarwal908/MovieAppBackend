@@ -24,6 +24,7 @@ const customStyles = {
     }
 };
 
+
 const TabContainer = function (props) {
     return (
         <Typography component="div" style={{ padding: 0, textAlign: 'center' }}>
@@ -62,6 +63,7 @@ class Header extends Component {
         }
     }
 
+
     openModalHandler = () => {
         this.setState({
             modalIsOpen: true,
@@ -86,6 +88,7 @@ class Header extends Component {
     closeModalHandler = () => {
         this.setState({ modalIsOpen: false });
     }
+    
 
     tabChangeHandler = (event, value) => {
         this.setState({ value });
